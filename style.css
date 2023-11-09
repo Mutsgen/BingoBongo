@@ -1,0 +1,1044 @@
+/* fonts */
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 300;
+    src: url('./media/fonts/Rubik-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 500;
+    src: url('./media/fonts/Rubik-Medium.ttf');
+}
+
+
+@font-face {
+    font-family: 'Rubik';
+    font-weight: 700;
+    src: url('./media/fonts/Rubik-Bold.ttf');
+}
+/* standartify */
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+:root {
+	--text-color: #051439;
+	--invert-text-color: #ffffff;
+}
+
+body {
+	font-family: Rubik, sans-serif;
+	color: var(--text-color);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: none;
+}
+
+ul,
+li,
+ol,
+input,
+label,
+span,
+p,
+h1,
+h2,
+h3,
+fieldset,
+form {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: none;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.hidden {
+	position: absolute;
+	top: -99999px;
+	left: -99999px;
+	width: 0px;
+	height: 0px;
+	margin: -1px;
+	overflow: hidden;
+	visibility: hidden;
+}
+.page,
+.page__body {
+	padding: 0;
+	margin: 0;
+}
+
+/* some tags, btn, fields, check, radio */
+
+.interact-icons img {
+	cursor: pointer;
+}
+
+.btn_primary {
+	cursor: pointer;
+}
+
+.btn_primary:hover {
+	background-color: rgb(230, 82, 24);
+}
+
+.btn_primary:active {
+	background-color: rgb(202, 74, 23);
+}
+
+/* header */
+
+header {
+	height: 600px;
+	position: relative;
+	width: 100%;
+	position: relative;
+	background-color: #e7e2dc;
+	margin-top: auto;
+	margin: auto;
+}
+
+
+header .logo {
+	margin-left: 80px;
+	width: 80px;
+}
+
+header .logo:hover {
+	cursor: pointer;
+}
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	padding: 22px 30px 22px 30px;
+	align-items: center;
+	width: 100%;
+}
+
+.navigation a:hover {
+	color: #3d3d3d;
+}
+
+.navigation__burger-icon {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 25px;
+	left: 30px;
+	display: none;
+}
+
+.navigation__burger-icon img {
+	width: 100%;
+	height: 100%;
+}
+
+nav {
+	display: flex;
+	gap: 30px;
+	font-family: 'Rubik';
+	font-weight: 500;
+}
+
+.interact-icons {
+	display: flex;
+	gap: 30px;
+	margin-right: 120px;
+}
+
+.header-content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	position: relative;
+	background-image: url('./assets/img/waves.png');
+	height: 500px;
+	text-align: center;
+	gap: 20px;
+
+}
+
+.header__main,
+.header__desc,
+.btn-catalog {
+	z-index: 3;
+}
+
+.header__star,
+.header__flower {
+	z-index: 2;
+}
+
+.header__main {
+	font-weight: 700;
+	font-size: 50px;
+	text-transform: uppercase;
+}
+
+.header__main span {
+	color: rgb(44, 197, 197);
+}
+
+.header__desc {
+	font-weight: 300;
+}
+
+.btn-catalog {
+	margin-top: 20px;
+	border-radius: 10px;
+	padding: 12px 30px 12px 30px;
+	background-color: rgb(255, 90, 23);
+	color: white;
+	font-weight: 300;
+	border: 0;
+	font-family: 'Rubik';
+}
+
+.header__star {
+	width: 140px;
+	position: absolute;
+	top: 37%;
+	left: 0;
+}
+
+.header__flower {
+	width: 120px;
+	position: absolute;
+	top: 15%;
+	right: 0;
+}
+
+/* main */
+
+main {
+	width: 100%;
+	margin: auto;
+	background-color: white;
+}
+
+.about {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.about-main {
+	max-width: 1200px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 90px 80px 90px 80px;
+	align-items: end;
+	gap: 90px;
+}
+
+.about-main img {
+	width: 100%;
+	height: 100%;
+}
+
+.about-main__text h2 {
+	text-transform: uppercase;
+	margin-bottom: 50px;
+	font-size: 50px;
+}
+
+.about-main__text {
+	width: 500px;
+	font-weight: 300;
+	margin: 0 auto;
+}
+
+.about-main__img {
+	min-width: 400px;
+	max-width: 530px;
+	max-height: 400px;
+	width: 40%;
+	margin: 0 auto;
+}
+
+.about__cards {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 75px;
+	padding-left: 90px;
+	padding-right: 90px;
+	padding: 50px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	min-height: fit-content;
+	height: fit-content;
+	width: 280px;
+	padding: 32px;
+	border-radius: 60px;
+}
+
+.card p {
+	font-weight: 300;
+	font-size: 15px;
+}
+
+.card h3 {
+	font-size: 23px;
+}
+
+.card img {
+	height: 180px;
+	display: block;
+	margin: 0 auto;
+}
+
+.card__first {
+	background-color: #fae7f3;
+}
+
+.card__second {
+	background-color: #e7fafa;
+}
+
+.card__third {
+	background-color: #fcf3da;
+}
+
+/* BINGO BONGO */
+#catalog {
+	display: flex;
+	justify-content: center;
+}
+
+.bingo-bongo {
+	display: flex;
+	margin-top: 50px;
+	min-height: 500px;
+	background-color: #F4F1EA;
+	border-radius: 140px;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+	padding: 50px 90px;
+	max-width: 1200px;
+}
+
+.bb__head {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.bb__head h2 {
+	font-size: 55px;
+}
+
+.bb__head p {
+	font-weight: 300;
+}
+
+.bb__cards {}
+
+.bb__cards {
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap: 50px;
+	justify-content: center;
+	align-items: center;
+}
+
+.bb__card {
+	position: relative;
+}
+
+.bb__card-img {
+	width: 150px;
+}
+
+.bb__card span {
+	position: absolute;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+/* FAVORITE GAMES */
+
+.favorite-games {
+	margin-top: 50px;
+	display: flex;
+	gap: 50px;
+	align-items: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-bottom: 50px;
+
+}
+
+
+.favorite {
+	display: flex;
+	justify-content: center;
+}
+
+.favorite-games h2 {
+	text-transform: uppercase;
+	font-size: 50px;
+}
+
+.favorite__top-container {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+
+}
+
+.favorite__card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #F4F1EA;
+	overflow: hidden;
+}
+
+
+.dino-card {
+	position: relative;
+	max-width: 500px;
+	min-width: 450px;
+	height: 270px;
+	border-radius: 30px 30px 10px 170px;
+	margin-left: auto;
+}
+
+.dino-card img {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+}
+
+.treasure-card {
+	width: 250px;
+	position: relative;
+	border-radius: 100%;
+	height: 250px
+}
+
+.sleepyjoe-card {
+	width: 250px;
+	padding: 20px;
+	position: relative;
+	border-radius: 50px;
+	height: 250px;
+}
+
+.favorite__bot-container {
+	display: flex;
+	align-items: center;
+	display: flex;
+	gap: 50px
+}
+
+
+/* SALE */
+.sale {
+	display: flex;
+	justify-content: center;
+	background: rgb(239, 236, 229);
+	background: linear-gradient(0deg, rgba(239, 236, 229, 1) 0%, rgba(241, 238, 231, 1) 100%);
+}
+
+.sale__container {
+	position: relative;
+	width: 1200px;
+	height: fit-content;
+	height: 465px;
+}
+
+.sale-50 {
+	position: absolute;
+	z-index: 1;
+	left: 50px;
+	top: 50px;
+}
+
+
+
+.sale_description {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	position: absolute;
+	left: 200px;
+	top: 100px;
+}
+
+.sale__bg {
+	position: absolute;
+	width: 100%;
+	min-width: 1100px;
+	z-index: 0;
+}
+
+.sale__bg-mini {
+	display: none;
+}
+
+.sale_description {
+	font-weight: 500;
+	z-index: 5;
+}
+
+.sale_description button {
+	width: fit-content;
+}
+
+.sale__container h2 {
+	text-transform: uppercase;
+	font-size: 50px;
+}
+
+.sale-50 {
+	position: absolute;
+	left: -150px;
+	top: -50px;
+}
+
+.sale-50 img {
+	object-fit: cover;
+}
+
+.sale-50 span {
+	display: block;
+	z-index: 5;
+	position: absolute;
+	left: 35px;
+	top: 45px;
+	font-size: 17px;
+	transform: rotate(-28deg);
+	color: rgb(35, 180, 180);
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+
+/* GAME OF MONTH */
+#month_game {
+	display: flex;
+	justify-content: center;
+}
+
+.month-game {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 35px;
+	padding-left: 70px;
+	padding-right: 70px;
+	max-width: 1200px;
+}
+
+.month-game__left {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+	width: fit-content;
+	width: 510px;
+	margin: 0 auto;
+}
+
+.month-game__left p {
+	font-weight: 300;
+}
+
+.month-game__select {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	width: 100%;
+	height: fit-content;
+	border-radius: 15px;
+	background-color: #eeecea;
+	padding: 5px;
+
+}
+
+.select__item {
+	border: none;
+	outline: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: fit-content;
+	width: 100%;
+	padding: 10px 35px 10px 35px;
+	border-radius: 15px;
+	background-color: #eeecea;
+	font-family: "Rubik";
+	justify-content: center;
+}
+
+.select__item:focus {
+	background-color: #f5d467;
+}
+
+.select__item:hover {
+	cursor: pointer;
+	filter: brightness(95%);
+}
+
+.month-game__right {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	margin: 0 auto;
+}
+
+.month-game__right__header {
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+}
+
+.month-game__right__header .label {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 14px;
+	background-color: #e1fafc;
+	border-radius: 15px;
+	padding: 10px 20px 10px 20px;
+
+}
+
+.month-game__right__header .label img {
+	width: 25px;
+}
+
+.month-game__right__header .rating {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+}
+
+.month-game__rating_img {
+	width: 20px;
+}
+
+.month-game__right h2 {
+	font-size: 50px;
+	text-transform: uppercase;
+	margin-top: 15px;
+}
+
+.month-game__right p {
+	margin-top: 15px;
+	font-weight: 300;
+}
+
+.month-game__right .month__specs {
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.month-game__right .month__specs .spec {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.order__container {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: row;
+	gap: 60px;
+}
+
+.order__price {
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.to-cart_btn {
+	padding: 15px 25px 15px 25px;
+	border-radius: 15px;
+	border: none;
+	background-color: #ff6118;
+	color: white;
+	font-weight: 500;
+	font-family: 'Rubik';
+}
+
+
+/* FORM SECTION */
+#igroteka {
+	background-image: url('./assets/img/waves_footer.png');
+	width: 100vw;
+}
+
+.invite {
+	margin-top: 100px;
+	padding-bottom: 150px;
+	padding-left: 70px;
+	padding-right: 70px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-top: 200px;
+	display: flex;
+	gap: 150px;
+	flex-direction: row;
+	height: fit-content;
+}
+
+.invite__left {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 540px
+}
+
+.invite__left h2 {
+	text-transform: uppercase;
+	font-size: 70px;
+}
+
+.invite__left p {
+	font-weight: 300;
+}
+
+.invite-component_container {
+	position: relative;
+}
+
+.invite-component {
+	position: absolute;
+}
+
+.invite-component_container span {
+	position: absolute;
+	font-size: 20px;
+}
+
+
+
+.invite__right {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 34px;
+}
+
+.invite__input {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.invite__input span {
+	color: rgb(131, 131, 131);
+	font-weight: 300;
+}
+
+.invite__input input {
+	background-color: #f0f0eb;
+	border: 1px solid rgb(168, 168, 168);
+	border-radius: 15px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 20px;
+	padding: 20px 20px 20px 20px;
+}
+
+.level-span {
+	font-weight: 300;
+}
+
+.level-container {
+	font-weight: 300;
+}
+
+.level-container fieldset {
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	border: none;
+}
+
+.level-container fieldset input {
+	height: 19px;
+	width: 19px;
+	background-color: #e7e2dc;
+	margin: 0;
+	padding: 0;
+
+}
+
+.level-radio__container input::before {
+	background: black;
+}
+
+.level-radio__container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 5px;
+}
+
+.personal-data__container {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+	align-items: center;
+	font-weight: 300;
+}
+
+.personal-data__container input {
+	height: 19px;
+	width: 19px;
+	border-radius: 25px;
+}
+
+.buy-ticket-btn {
+	padding: 17px 25px 17px 25px;
+	border-radius: 15px;
+	border: none;
+	background-color: #ff6118;
+	color: white;
+	font-weight: 500;
+	font-family: 'Rubik';
+	width: 200px;
+}
+
+/* FOOTER */
+
+footer {
+	margin-top: 150px;
+	height: 150px;
+	background-color: #dfd9d2;
+	width: 100%;
+	margin: auto;
+	padding-left: 150px;
+	padding-right: 150px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 300;
+}
+
+footer a {
+	text-decoration: underline;
+}
+
+footer .icons-cont {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+@media screen and (max-width: 1035px) {
+	.navigation {
+			display: none;
+	}
+
+	header {
+			padding-top: 50px;
+	}
+
+	.header-content {
+			height: 100%;
+			;
+	}
+
+	.navigation__burger-icon {
+			display: block;
+	}
+
+	.favorite {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			/* margin: 0 auto; */
+	}
+
+	.favorite-games {
+			flex-direction: column;
+			align-items: center;
+			margin: 0 auto;
+	}
+
+
+	.sale__bg {
+			display: none;
+
+	}
+
+	.sale__bg-mini {
+			display: block;
+			width: 100%;
+	}
+
+	.invite {
+			flex-direction: column;
+			align-items: center;
+			padding-bottom: 5px;
+			padding: 150px 10px 5px 10px;
+	}
+
+	.invite__right {
+			margin-top: 250px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.navigation {
+			display: none;
+	}
+
+	header {
+			padding-top: 50px;
+	}
+
+	.header-content {
+			height: 100%;
+			;
+	}
+
+	.navigation__burger-icon {
+			display: block;
+	}
+
+	.about-main {
+			flex-direction: column;
+			align-items: center;
+	}
+
+	.about__cards {
+			gap: 35px;
+	}
+
+	.about-main {
+			padding: 50px 10px 10px 10px;
+	}
+
+	.about-main__text {
+			min-width: 250px;
+			width: 90% !important;
+	}
+
+	.about-main img {
+			width: 95% !important;
+			min-width: 250px !important;
+	}
+
+	.about__cards {
+			flex-direction: column;
+			align-items: center;
+	}
+
+	.card {
+			min-width: 250px;
+			max-width: 280px;
+			width: 90%;
+	}
+
+	.bb__cards {
+			flex-direction: column;
+			align-items: center;
+	}
+
+	.bingo-bongo {
+			height: 100%;
+			padding: 50px 10px 10px 50px;
+	}
+
+	.favorite {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+	}
+
+	.favorite-games {
+			flex-direction: column;
+			align-items: center;
+	}
+
+	.favorite__bot-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+	}
+
+	.sleepyjoe-card {
+			height: 200px;
+	}
+
+	.sale__container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: fit-content;
+			margin-top: 50px;
+			margin-bottom: 50px;
+	}
+
+	.sale_description {
+			position: static;
+
+	}
+
+	.sale__container img,
+	.sale-50 {
+			display: none;
+	}
+
+	.month-game {
+			flex-direction: column;
+			align-items: center;
+	}
+
+	.invite {
+			flex-direction: column;
+			align-items: center;
+	}
+
+	.invite__right {
+			margin-top: 250px;
+	}
+
+	footer {
+			padding-left: 50px;
+			padding-right: 50px;
+	}
+}
